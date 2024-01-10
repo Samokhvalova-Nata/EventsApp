@@ -1,9 +1,21 @@
+.header {
+  height: 50px;
+  /* background: linear-gradient(305deg, #dbfff3, transparent); */
+  padding: 15px 30px;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  gap: 15px;
   align-items: center;
-  padding: 6rem;
+  padding: 1.5rem;
   min-height: 100vh;
 }
 

@@ -14,18 +14,37 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header>
-        <nav>
+
+      <header className={styles.header}>
+        <nav className={styles.nav}>
           <img />
           <a href=''>Home</a>
           <a href='/events'>Events</a>
           <a href='/about-us'>About Us</a>
         </nav>
       </header>
+
       <main className={`${styles.main} ${inter.className}`}>
-        
+        <a href=''>
+          <img />
+          <h2>Events in London</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </a>
+        <a href=''>
+          <img />
+          <h2>Events in San-Francisco</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </a>
+        <a href=''>
+          <img />
+          <h2>Events in Barcelona</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </a>
       </main>
-      <footer className={styles.footer}></footer>
+
+      <footer className={styles.footer}>
+        <p> © 2024 Samokhvalova Nata - A Project Built with Next.js </p>
+      </footer>
     </>
   )
 }
