@@ -1,19 +1,21 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const EventCatPage = ({ data, pageName }) => {
     return (
         <div>
-            
+
             {/* TODO */}
-            <h1>{`Events in ${pageName.toUpperCase()}`}</h1>
+            <h1>{`Events in ${pageName}`}</h1>
 
             <div>
                 {data.map(ev => (
-                    <a href={`/events/${ev.city}/${ev.id}`} key={ev.id}>
+                    <Link href={`/events/${ev.city}/${ev.id}`} key={ev.id} passHref>
                         <Image src={ev.image} alt={ev.title} width={300} height={300}/>
                         <h2>{ev.title}</h2>
                         <p>{ev.description}</p>
-                    </a>
+                    </Link>
+                    
                 ))}
             </div>
         </div>
@@ -31,7 +33,6 @@ export async function getStaticPaths() {
             },
         };
     });
-    // console.log('allPaths', allPaths)
 
     return {
         paths: allPaths,
@@ -48,7 +49,9 @@ export async function getStaticProps(context) {
     const data = allEvents.filter(ev => ev.city.toLowerCase() === id.toLowerCase());
     console.log('data', data)
 
+    const pageName = id.charAt(0).toUpperCase() + id.slice(1).toLowerCase();
+
     return {
-        props: { data, pageName: id }
+        props: { data, pageName }
     };
 };
