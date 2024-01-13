@@ -9,6 +9,20 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+input,
+button {
+  margin: 0;
+  padding: 0;
 }
 
 * {
@@ -21,6 +35,18 @@ ul {
   list-style: none;
 }
 
+button {
+  cursor: pointer;
+  /* font-family: inherit; */
+  /* border: none; */
+}
+
+body,
+button,
+a {
+  cursor: url('/public/images/cursor-vector.svg');
+
+}
 
 @media (prefers-color-scheme: dark) {
   html {
