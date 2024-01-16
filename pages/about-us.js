@@ -1,6 +1,12 @@
+import Head from "next/head";
+
 const AboutUsPage = () => {
     return (
-    <div>
+        <>
+        <Head>
+            <title>About us</title>
+        </Head>
+        <div>
         <h1> About us Page</h1>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -37,7 +43,8 @@ const AboutUsPage = () => {
                 </p>
             </li>
         </ul>
-    </div>
+        </div>
+    </>
     );
 };
 
